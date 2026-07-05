@@ -6,8 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E46C2EE02FFAEAFA008860B9 /* UserManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C2EDF2FFAEAFA008860B9 /* UserManagerApp.swift */; };
+		E46C2EEC2FFAEF2E008860B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E46C2EEB2FFAEF2E008860B9 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E46C2EDC2FFAEAFA008860B9 /* UserManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46C2EDF2FFAEAFA008860B9 /* UserManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46C2EEC2FFAEF2E008860B9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +39,14 @@
 		E46C2ED32FFAEAFA008860B9 = {
 			isa = PBXGroup;
 			children = (
+				E46C2F052FFAF162008860B9 /* Data */,
+				E46C2EFB2FFAF08C008860B9 /* App */,
+				E46C2EFC2FFAF0B1008860B9 /* Domain */,
+				E46C2F0F2FFAF207008860B9 /* Services */,
+				E46C2EF42FFAEFCF008860B9 /* Coordinators */,
+				E46C2F0A2FFAF1C1008860B9 /* Presentation */,
+				E46C2F102FFAF226008860B9 /* Utils */,
+				E46C2F112FFAF236008860B9 /* Resources */,
 				E46C2EDE2FFAEAFA008860B9 /* UserManager */,
 				E46C2EDD2FFAEAFA008860B9 /* Products */,
 			);
@@ -43,6 +58,151 @@
 				E46C2EDC2FFAEAFA008860B9 /* UserManager.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E46C2EF42FFAEFCF008860B9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E46C2EFB2FFAF08C008860B9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E46C2EDF2FFAEAFA008860B9 /* UserManagerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E46C2EFC2FFAF0B1008860B9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E46C2F042FFAF14C008860B9 /* Entities */,
+				E46C2F002FFAF0EC008860B9 /* UsesCases */,
+				E46C2EFF2FFAF0E5008860B9 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E46C2EFF2FFAF0E5008860B9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E46C2F002FFAF0EC008860B9 /* UsesCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UsesCases;
+			sourceTree = "<group>";
+		};
+		E46C2F042FFAF14C008860B9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E46C2F052FFAF162008860B9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E46C2F082FFAF192008860B9 /* Repositories */,
+				E46C2F072FFAF17E008860B9 /* Persistence */,
+				E46C2F062FFAF175008860B9 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E46C2F062FFAF175008860B9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E46C2F092FFAF1A6008860B9 /* DTOs */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E46C2F072FFAF17E008860B9 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		E46C2F082FFAF192008860B9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E46C2F092FFAF1A6008860B9 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		E46C2F0A2FFAF1C1008860B9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E46C2F0E2FFAF1F9008860B9 /* Components */,
+				E46C2F0D2FFAF1DC008860B9 /* CreateUser */,
+				E46C2F0C2FFAF1D1008860B9 /* UserDetail */,
+				E46C2F0B2FFAF1C9008860B9 /* UserList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E46C2F0B2FFAF1C9008860B9 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		E46C2F0C2FFAF1D1008860B9 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		E46C2F0D2FFAF1DC008860B9 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		E46C2F0E2FFAF1F9008860B9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E46C2F0F2FFAF207008860B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E46C2F102FFAF226008860B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E46C2F112FFAF236008860B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +225,7 @@
 			);
 			name = UserManager;
 			packageProductDependencies = (
+				E46C2EEB2FFAEF2E008860B9 /* Alamofire */,
 			);
 			productName = UserManager;
 			productReference = E46C2EDC2FFAEAFA008860B9 /* UserManager.app */;
@@ -94,6 +255,10 @@
 			);
 			mainGroup = E46C2ED32FFAEAFA008860B9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E46C2EEA2FFAEF2E008860B9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E45256F12FFAF4F700B80942 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E46C2EDD2FFAEAFA008860B9 /* Products */;
 			projectDirPath = "";
@@ -119,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46C2EE02FFAEAFA008860B9 /* UserManagerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +494,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E45256F12FFAF4F700B80942 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E46C2EEA2FFAEF2E008860B9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E46C2EEB2FFAEF2E008860B9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E46C2EEA2FFAEF2E008860B9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E46C2ED42FFAEAFA008860B9 /* Project object */;
 }
