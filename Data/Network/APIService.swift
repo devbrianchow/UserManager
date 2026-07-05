@@ -43,7 +43,7 @@ final class APIService: APIServiceProtocol {
 
     static let shared = APIService()
 
-    private let baseURL = "http://jsonplaceholder.typicode.com" // Use http for test in simulator
+    private let baseURL = "https://jsonplaceholder.typicode.com" 
     private let session = Session()
 
     private init() {}
