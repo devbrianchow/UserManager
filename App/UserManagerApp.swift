@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct UserManagerApp: App {
+    @StateObject private var router = NavigationRouter()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppCoordinatorView()
+                .environmentObject(router)
         }
     }
 }
