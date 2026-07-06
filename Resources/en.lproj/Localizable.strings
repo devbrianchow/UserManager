@@ -8,6 +8,7 @@
 
 // MARK: - List UserView
 "nav_list_user" = "Lista de Usuarios";
+"eliminar"      = "Eliminar";
 
 // MARK: - Create UserView
 

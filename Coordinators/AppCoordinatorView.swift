@@ -14,7 +14,8 @@ struct AppCoordinatorView: View {
         let repo = UserRepository()
         return UserListViewModel(
             fetchUsers: FetchUsersUseCase(repository: repo),
-            saveUser:   SaveUserUseCase(repository: repo)
+            saveUser:   SaveUserUseCase(repository: repo),
+            deleteUser: DeleteUserUseCase(repository: repo)
         )
     }()
 
