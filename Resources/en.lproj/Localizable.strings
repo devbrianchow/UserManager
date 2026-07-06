@@ -8,6 +8,7 @@
 
 // MARK: - List UserView
 "nav_list_user" = "Lista de Usuarios";
+"state_loading" = "Cargando datos de usuario...";
 "eliminar"      = "Eliminar";
 
 // MARK: - Create UserView

@@ -12,6 +12,32 @@ struct UserListView: View {
     @ObservedObject var viewModel: UserListViewModel
 
     var body: some View {
+        Group {
+            if viewModel.isLoading {
+                ProgressView(LocalizedStringKey("state_loading"))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                userList
+            }
+        }
+        .navigationTitle(LocalizedStringKey("nav_list_user"))
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    router.navigate(to: .createUser)
+                } label: {
+                    Image(systemName: "person.badge.plus")
+                        .font(.system(size: 24))
+                }
+            }
+        }
+        .task {
+            await viewModel.loadUsers()
+        }
+    }
+
+    // MARK: - List
+    private var userList: some View {
         List {
             ForEach(viewModel.users) { user in
                 HStack {
@@ -20,20 +46,11 @@ struct UserListView: View {
                         .foregroundColor(.blue)
 
                     VStack(alignment: .leading) {
-                        Text(user.username)
-                            .font(.headline)
-                        Text(user.name)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        Text(user.phone)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        Text(user.email)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        Text(user.city)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                        Text(user.username).font(.headline)
+                        Text(user.name).font(.subheadline).foregroundColor(.secondary)
+                        Text(user.phone).font(.subheadline).foregroundColor(.secondary)
+                        Text(user.email).font(.subheadline).foregroundColor(.secondary)
+                        Text(user.city).font(.subheadline).foregroundColor(.secondary)
                     }
 
                     Spacer()
@@ -50,25 +67,11 @@ struct UserListView: View {
                     Button(role: .destructive) {
                         viewModel.delete(user: user)
                     } label: {
-                        Label(LocalizedStringKey("Eliminar"), systemImage: "trash")
+                        Label(LocalizedStringKey("eliminar"), systemImage: "trash")
                     }
                 }
             }
         }
         .listStyle(.plain)
-        .navigationTitle(LocalizedStringKey("nav_list_user"))
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    router.navigate(to: .createUser)
-                } label: {
-                    Image(systemName: "person.badge.plus")
-                        .font(.system(size: 24))
-                }
-            }
-        }
-        .task {
-            await viewModel.loadUsers()
-        }
     }
 }
