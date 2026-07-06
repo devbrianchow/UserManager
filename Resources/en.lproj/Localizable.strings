@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  UserManager
+
+  Created by Brian Huamani on 5/07/26.
+  
+*/
+
+// MARK: - List UserView
+"nav_list_user" = "Lista de Usuarios";
+
+// MARK: - Create UserView
+
+"field_name"   = "Nombre";
+"field_email"  = "Correo";
+"field_phone"  = "Teléfono";
+"get_location" = "Obtener ubicación";
+"create_user"  = "Crear usuario";
+"cancel"       = "Cancelar";
+"ok"           = "Aceptar";
+"nav_create_user" = "Crear usuario";
+"location_popup_title" = "Ubicación obtenida";
+"error_location_denied" = "Acceso a ubicación denegado. Actívalo en Ajustes.";
+
+// MARK: - Validation
+
+"validation_required" = "Ingrese un valor";
+"validation_email" = "Email invalido";
+"validation_phone" = "Telefono invalido";
+"validation_name" = "Nombre invalido";

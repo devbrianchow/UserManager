@@ -15,11 +15,14 @@ final class UserListViewModel: ObservableObject {
     @Published var errorMessage: String?
 
     private let fetchUsers: FetchUsersUseCaseProtocol
+    private let saveUser: SaveUserUseCaseProtocol
     
     init(
-        fetchUsers: FetchUsersUseCaseProtocol
+        fetchUsers: FetchUsersUseCaseProtocol,
+        saveUser: SaveUserUseCaseProtocol
     ) {
         self.fetchUsers = fetchUsers
+        self.saveUser = saveUser
     }
 
     func loadUsers() async {
@@ -31,5 +34,14 @@ final class UserListViewModel: ObservableObject {
             errorMessage = error.localizedDescription
         }
         isLoading = false
+    }
+    
+    func add(user: User) {
+        do {
+            try saveUser.execute(user: user)
+            users.insert(user, at: 0)
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
 }

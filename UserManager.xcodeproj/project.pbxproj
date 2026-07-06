@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4508CD72FFB250E00FFBE43 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CD62FFB250300FFBE43 /* CreateUserViewModel.swift */; };
+		E4508CD92FFB252000FFBE43 /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CD82FFB251D00FFBE43 /* CreateUserView.swift */; };
+		E4508CDB2FFB270600FFBE43 /* ValidatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CDA2FFB270000FFBE43 /* ValidatedTextField.swift */; };
+		E4508CDD2FFB27AB00FFBE43 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CDC2FFB278600FFBE43 /* LocationService.swift */; };
+		E4508CDF2FFB283100FFBE43 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CDE2FFB27FE00FFBE43 /* Validators.swift */; };
+		E4508CE12FFB2B4700FFBE43 /* SaveUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CE02FFB2B4200FFBE43 /* SaveUserUseCase.swift */; };
+		E4508CE42FFB311E00FFBE43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4508CE22FFB311E00FFBE43 /* Localizable.strings */; };
 		E45257192FFB1B3200B80942 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45257182FFB1B3200B80942 /* UserRepository.swift */; };
 		E452571B2FFB1B3C00B80942 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452571A2FFB1B3C00B80942 /* RealmService.swift */; };
 		E452571D2FFB1B4500B80942 /* UserRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452571C2FFB1B4500B80942 /* UserRealmObject.swift */; };
@@ -40,6 +47,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E4508CD62FFB250300FFBE43 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
+		E4508CD82FFB251D00FFBE43 /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
+		E4508CDA2FFB270000FFBE43 /* ValidatedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedTextField.swift; sourceTree = "<group>"; };
+		E4508CDC2FFB278600FFBE43 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E4508CDE2FFB27FE00FFBE43 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		E4508CE02FFB2B4200FFBE43 /* SaveUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserUseCase.swift; sourceTree = "<group>"; };
+		E4508CE32FFB311E00FFBE43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E45257182FFB1B3200B80942 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		E452571A2FFB1B3C00B80942 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		E452571C2FFB1B4500B80942 /* UserRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmObject.swift; sourceTree = "<group>"; };
@@ -142,6 +156,7 @@
 		E46C2F002FFAF0EC008860B9 /* UsesCases */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CE02FFB2B4200FFBE43 /* SaveUserUseCase.swift */,
 				E45257242FFB1B7200B80942 /* FetchUsersUseCase.swift */,
 			);
 			path = UsesCases;
@@ -229,6 +244,8 @@
 		E46C2F0D2FFAF1DC008860B9 /* CreateUser */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CD82FFB251D00FFBE43 /* CreateUserView.swift */,
+				E4508CD62FFB250300FFBE43 /* CreateUserViewModel.swift */,
 			);
 			path = CreateUser;
 			sourceTree = "<group>";
@@ -236,6 +253,7 @@
 		E46C2F0E2FFAF1F9008860B9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CDA2FFB270000FFBE43 /* ValidatedTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -243,6 +261,7 @@
 		E46C2F0F2FFAF207008860B9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CDC2FFB278600FFBE43 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -250,6 +269,7 @@
 		E46C2F102FFAF226008860B9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CDE2FFB27FE00FFBE43 /* Validators.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -257,6 +277,7 @@
 		E46C2F112FFAF236008860B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CE22FFB311E00FFBE43 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -330,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E45257422FFB204200B80942 /* UserManager-Info.plist in Resources */,
+				E4508CE42FFB311E00FFBE43 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +364,11 @@
 			files = (
 				E45257192FFB1B3200B80942 /* UserRepository.swift in Sources */,
 				E452571B2FFB1B3C00B80942 /* RealmService.swift in Sources */,
+				E4508CDB2FFB270600FFBE43 /* ValidatedTextField.swift in Sources */,
+				E4508CE12FFB2B4700FFBE43 /* SaveUserUseCase.swift in Sources */,
+				E4508CD72FFB250E00FFBE43 /* CreateUserViewModel.swift in Sources */,
 				E46C2EE02FFAEAFA008860B9 /* UserManagerApp.swift in Sources */,
+				E4508CDF2FFB283100FFBE43 /* Validators.swift in Sources */,
 				E452571F2FFB1B5000B80942 /* UserDTO.swift in Sources */,
 				E45257212FFB1B5D00B80942 /* APIService.swift in Sources */,
 				E45257272FFB1B7F00B80942 /* UserRepositoryProtocol.swift in Sources */,
@@ -352,12 +378,25 @@
 				E45257312FFB1BB300B80942 /* UserListViewModel.swift in Sources */,
 				E45257292FFB1B8F00B80942 /* NavigationRouter.swift in Sources */,
 				E45257252FFB1B7200B80942 /* FetchUsersUseCase.swift in Sources */,
+				E4508CD92FFB252000FFBE43 /* CreateUserView.swift in Sources */,
 				E452572D2FFB1B9E00B80942 /* AppCoordinatorView.swift in Sources */,
+				E4508CDD2FFB27AB00FFBE43 /* LocationService.swift in Sources */,
 				E452572F2FFB1BAD00B80942 /* UserListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E4508CE22FFB311E00FFBE43 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4508CE32FFB311E00FFBE43 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E46C2EE52FFAEAFE008860B9 /* Debug */ = {
