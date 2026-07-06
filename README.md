@@ -71,3 +71,6 @@ Agrega en `Info.plist`:
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>Necesitamos tu ubicación para completar el registro.</string>
 ```
+
+## 🏗 Demo
+<img width="335" height="697" alt="Captura de pantalla 2026-07-05 a la(s) 9 36 10 p  m" src="https://github.com/user-attachments/assets/8cbdd001-fe7a-4968-8998-3c0301fd4b96" />
