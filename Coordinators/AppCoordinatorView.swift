@@ -29,10 +29,15 @@ struct AppCoordinatorView: View {
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
 
-                    case .userDetail:
-                        Text("Example View User Detail")
-                            .font(.title)
-                            .padding()
+                    case .userDetail(let user):
+                        let repo = UserRepository()
+                        UserDetailView(
+                            viewModel: UserDetailViewModel(
+                                user: user,
+                                updateUser: UpdateUserUseCase(repository: repo)
+                            )
+                        )
+                        .environmentObject(router)
 
                     case .createUser:
                         CreateUserView(

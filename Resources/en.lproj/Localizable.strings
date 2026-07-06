@@ -28,3 +28,11 @@
 "validation_email" = "Email invalido";
 "validation_phone" = "Telefono invalido";
 "validation_name" = "Nombre invalido";
+
+// MARK: - User Detail View
+
+"field_web"  = "Web";
+"field_city"  = "Ciudad";
+"field_company"  = "Compañia";
+"save" = "Guardar";
+"message_save" = "Cambios guardados";
