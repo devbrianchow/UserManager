@@ -16,13 +16,16 @@ final class UserListViewModel: ObservableObject {
 
     private let fetchUsers: FetchUsersUseCaseProtocol
     private let saveUser: SaveUserUseCaseProtocol
+    private let deleteUserUseCase: DeleteUserUseCaseProtocol
     
     init(
         fetchUsers: FetchUsersUseCaseProtocol,
-        saveUser: SaveUserUseCaseProtocol
+        saveUser: SaveUserUseCaseProtocol,
+        deleteUser: DeleteUserUseCaseProtocol
     ) {
         self.fetchUsers = fetchUsers
         self.saveUser = saveUser
+        self.deleteUserUseCase = deleteUser
     }
 
     func loadUsers() async {
@@ -40,6 +43,15 @@ final class UserListViewModel: ObservableObject {
         do {
             try saveUser.execute(user: user)
             users.insert(user, at: 0)
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+    
+    func delete(user: User) {
+        do {
+            try deleteUserUseCase.execute(id: user.id)
+            users.removeAll { $0.id == user.id }
         } catch {
             errorMessage = error.localizedDescription
         }

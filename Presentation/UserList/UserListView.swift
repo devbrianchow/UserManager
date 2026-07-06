@@ -48,9 +48,9 @@ struct UserListView: View {
                 }
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
-                        // TODO: Call delete user
+                        viewModel.delete(user: user)
                     } label: {
-                        Label("Eliminar", systemImage: "trash")
+                        Label(LocalizedStringKey("Eliminar"), systemImage: "trash")
                     }
                 }
             }
