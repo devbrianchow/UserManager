@@ -14,6 +14,9 @@
 		E4508CDF2FFB283100FFBE43 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CDE2FFB27FE00FFBE43 /* Validators.swift */; };
 		E4508CE12FFB2B4700FFBE43 /* SaveUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CE02FFB2B4200FFBE43 /* SaveUserUseCase.swift */; };
 		E4508CE42FFB311E00FFBE43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4508CE22FFB311E00FFBE43 /* Localizable.strings */; };
+		E4508CE62FFB376900FFBE43 /* UpdateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CE52FFB375D00FFBE43 /* UpdateUserUseCase.swift */; };
+		E4508CE82FFB379200FFBE43 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CE72FFB378B00FFBE43 /* UserDetailViewModel.swift */; };
+		E4508CEA2FFB37C100FFBE43 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4508CE92FFB37BD00FFBE43 /* UserDetailView.swift */; };
 		E45257192FFB1B3200B80942 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45257182FFB1B3200B80942 /* UserRepository.swift */; };
 		E452571B2FFB1B3C00B80942 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452571A2FFB1B3C00B80942 /* RealmService.swift */; };
 		E452571D2FFB1B4500B80942 /* UserRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452571C2FFB1B4500B80942 /* UserRealmObject.swift */; };
@@ -54,6 +57,9 @@
 		E4508CDE2FFB27FE00FFBE43 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		E4508CE02FFB2B4200FFBE43 /* SaveUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserUseCase.swift; sourceTree = "<group>"; };
 		E4508CE32FFB311E00FFBE43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E4508CE52FFB375D00FFBE43 /* UpdateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserUseCase.swift; sourceTree = "<group>"; };
+		E4508CE72FFB378B00FFBE43 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		E4508CE92FFB37BD00FFBE43 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		E45257182FFB1B3200B80942 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		E452571A2FFB1B3C00B80942 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		E452571C2FFB1B4500B80942 /* UserRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmObject.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 		E46C2F002FFAF0EC008860B9 /* UsesCases */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CE52FFB375D00FFBE43 /* UpdateUserUseCase.swift */,
 				E4508CE02FFB2B4200FFBE43 /* SaveUserUseCase.swift */,
 				E45257242FFB1B7200B80942 /* FetchUsersUseCase.swift */,
 			);
@@ -237,6 +244,8 @@
 		E46C2F0C2FFAF1D1008860B9 /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E4508CE92FFB37BD00FFBE43 /* UserDetailView.swift */,
+				E4508CE72FFB378B00FFBE43 /* UserDetailViewModel.swift */,
 			);
 			path = UserDetail;
 			sourceTree = "<group>";
@@ -365,6 +374,7 @@
 				E45257192FFB1B3200B80942 /* UserRepository.swift in Sources */,
 				E452571B2FFB1B3C00B80942 /* RealmService.swift in Sources */,
 				E4508CDB2FFB270600FFBE43 /* ValidatedTextField.swift in Sources */,
+				E4508CE62FFB376900FFBE43 /* UpdateUserUseCase.swift in Sources */,
 				E4508CE12FFB2B4700FFBE43 /* SaveUserUseCase.swift in Sources */,
 				E4508CD72FFB250E00FFBE43 /* CreateUserViewModel.swift in Sources */,
 				E46C2EE02FFAEAFA008860B9 /* UserManagerApp.swift in Sources */,
@@ -375,6 +385,7 @@
 				E452572B2FFB1B9700B80942 /* AppRoute.swift in Sources */,
 				E452571D2FFB1B4500B80942 /* UserRealmObject.swift in Sources */,
 				E45257232FFB1B6800B80942 /* User.swift in Sources */,
+				E4508CE82FFB379200FFBE43 /* UserDetailViewModel.swift in Sources */,
 				E45257312FFB1BB300B80942 /* UserListViewModel.swift in Sources */,
 				E45257292FFB1B8F00B80942 /* NavigationRouter.swift in Sources */,
 				E45257252FFB1B7200B80942 /* FetchUsersUseCase.swift in Sources */,
@@ -382,6 +393,7 @@
 				E452572D2FFB1B9E00B80942 /* AppCoordinatorView.swift in Sources */,
 				E4508CDD2FFB27AB00FFBE43 /* LocationService.swift in Sources */,
 				E452572F2FFB1BAD00B80942 /* UserListView.swift in Sources */,
+				E4508CEA2FFB37C100FFBE43 /* UserDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

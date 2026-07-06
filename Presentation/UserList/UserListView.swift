@@ -16,7 +16,7 @@ struct UserListView: View {
             ForEach(viewModel.users) { user in
                 HStack {
                     Image(systemName: "person.circle.fill")
-                        .font(.title2)
+                        .font(.system(size: 24))
                         .foregroundColor(.blue)
 
                     VStack(alignment: .leading) {
@@ -38,15 +38,17 @@ struct UserListView: View {
 
                     Spacer()
 
-                    Button {} label: {
-                        Image(systemName: "pencil")
-                            .foregroundColor(.orange)
-                    }
-                    .buttonStyle(.plain)
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    router.navigate(to: .userDetail(user: user))
                 }
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
-                         //TODO: Call delete user
+                        // TODO: Call delete user
                     } label: {
                         Label("Eliminar", systemImage: "trash")
                     }
