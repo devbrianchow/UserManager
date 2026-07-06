@@ -9,32 +9,39 @@ import SwiftUI
 
 struct AppCoordinatorView: View {
     @EnvironmentObject var router: NavigationRouter
-    
+
     @StateObject private var listViewModel: UserListViewModel = {
         let repo = UserRepository()
-        
         return UserListViewModel(
-            fetchUsers: FetchUsersUseCase(repository: repo)
+            fetchUsers: FetchUsersUseCase(repository: repo),
+            saveUser:   SaveUserUseCase(repository: repo)
         )
     }()
+
+    @StateObject private var createViewModel = CreateUserViewModel()
 
     var body: some View {
         NavigationStack(path: $router.path) {
 
             UserListView(viewModel: listViewModel)
+                .environmentObject(router)
 
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
 
-                    case .userDetail(let user):
+                    case .userDetail:
                         Text("Example View User Detail")
                             .font(.title)
                             .padding()
 
                     case .createUser:
-                        Text("Example View Create User")
-                            .font(.title)
-                            .padding()
+                        CreateUserView(
+                            viewModel: createViewModel,
+                            onUserCreated: { newUser in
+                                listViewModel.add(user: newUser)
+                            }
+                        )
+                        .environmentObject(router)
                     }
                 }
         }

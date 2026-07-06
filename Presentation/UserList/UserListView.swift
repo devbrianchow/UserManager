@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserListView: View {
+    @EnvironmentObject var router: NavigationRouter
     @ObservedObject var viewModel: UserListViewModel
 
     var body: some View {
@@ -19,9 +20,18 @@ struct UserListView: View {
                         .foregroundColor(.blue)
 
                     VStack(alignment: .leading) {
-                        Text(user.name)
+                        Text(user.username)
                             .font(.headline)
+                        Text(user.name)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Text(user.phone)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
                         Text(user.email)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Text(user.city)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
@@ -44,13 +54,14 @@ struct UserListView: View {
             }
         }
         .listStyle(.plain)
-        .navigationTitle("Usuarios")
+        .navigationTitle(LocalizedStringKey("nav_list_user"))
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    //TODO: Add delete user
+                    router.navigate(to: .createUser)
                 } label: {
                     Image(systemName: "person.badge.plus")
+                        .font(.system(size: 24))
                 }
             }
         }
